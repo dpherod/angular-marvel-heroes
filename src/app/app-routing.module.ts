@@ -4,11 +4,16 @@ import {NgModule} from "@angular/core";
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/dashboard'
+    pathMatch: 'full',
+    redirectTo: 'dashboard'
   },
   {
     path: 'dashboard',
     loadChildren: 'app/+dashboard/dashboard.module#DashboardModule'
+  },
+  {
+    path: 'heroes',
+    loadChildren: 'app/+heroes/heroes.module#HeroesModule'
   }
 ];
 
