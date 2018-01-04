@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
-  MatButtonModule, MatCardModule, MatChipsModule, MatIconModule, MatListModule,
-  MatMenuModule
+  MatButtonModule, MatCardModule, MatChipsModule, MatDialogModule, MatFormFieldModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule, MatSnackBarModule
 } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
 
@@ -16,6 +19,11 @@ import { HeroActionsComponent } from './components/hero-actions/hero-actions.com
 import { EditComponent } from './containers/edit/edit.component';
 import { EditHeroComponent } from './components/edit-hero/edit-hero.component';
 import { PowerChipListComponent } from './components/power-chip-list/power-chip-list.component';
+import {AddHeroComponent} from "./dialogs/add-hero/add-hero.component";
+import {AddPowerComponent} from "../+powers/dialogs/add-power/add-power.component";
+import {SharedModule} from "../shared/shared.module";
+import {PowersRoutingModule} from "../+powers/powers-routing.module";
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
@@ -25,11 +33,21 @@ import { PowerChipListComponent } from './components/power-chip-list/power-chip-
     MatButtonModule,
     MatCardModule,
     MatChipsModule,
+    MatDialogModule,
     MatIconModule,
+    MatInputModule,
+    MatFormFieldModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSnackBarModule,
+    ReactiveFormsModule,
+    SharedModule
   ],
-  declarations: [IndexComponent, HeroesComponent, HeroComponent, HeroDetailComponent, HeroActionsComponent, EditComponent, EditHeroComponent, PowerChipListComponent]
+  entryComponents: [
+    AddHeroComponent
+  ],
+  declarations: [IndexComponent, HeroesComponent, HeroComponent, HeroDetailComponent, HeroActionsComponent, EditComponent, EditHeroComponent, PowerChipListComponent, AddHeroComponent
+    ]
 })
 export class HeroesModule {
 }
