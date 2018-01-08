@@ -22,16 +22,7 @@ export function reducer(state: State = initialState, action: PowersAction) {
     case LOAD_POWER_SUCCESS:
       return adapter.addOne(action.payload, state);
     case LOAD_POWERS_SUCCESS:
-      return adapter.addMany([...action.payload].sort((a, b) => {
-        const aName = a.name.toUpperCase();
-        const bName = b.name.toUpperCase();
-        if (aName < bName) {
-          return -1;
-        } else if (aName > bName) {
-          return 1;
-        }
-        return 0;
-      }), state);
+      return adapter.addAll(action.payload, state);
     case SELECT_POWER:
       return {...state, selectedPowerId: action.payload.id};
     case UPDATE_POWER_SUCCESS:

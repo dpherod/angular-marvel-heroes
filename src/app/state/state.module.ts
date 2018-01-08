@@ -1,4 +1,6 @@
+import {CommonModule} from "@angular/common";
 import {ModuleWithProviders, NgModule, Optional, SkipSelf} from '@angular/core';
+import {MatSnackBarModule} from "@angular/material";
 import {EffectsModule} from "@ngrx/effects";
 import {RouterStateSerializer, StoreRouterConnectingModule} from "@ngrx/router-store";
 import {StoreModule} from "@ngrx/store";
@@ -9,10 +11,13 @@ import {AppEffects} from "./app.effects";
 import {appMetaReducers, appReducer} from "./app.reducer";
 import {PowersEffects} from "./powers/effects/powers";
 import * as fromPowers from "./powers/reducers";
+import {SnackbarEffects} from "./shared/effects/snackbar";
 import {CustomRouterStateSerializer} from "./shared/utils";
 
 @NgModule({
   imports: [
+    CommonModule,
+    MatSnackBarModule,
     StoreRouterConnectingModule,
     StoreModule.forRoot(appReducer, {
       metaReducers: appMetaReducers
@@ -21,8 +26,9 @@ import {CustomRouterStateSerializer} from "./shared/utils";
     EffectsModule.forRoot([
       AppEffects
     ]),
-    EffectsModule.forRoot([
-      PowersEffects
+    EffectsModule.forFeature([
+      PowersEffects,
+      SnackbarEffects
     ]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
