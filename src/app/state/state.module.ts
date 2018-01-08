@@ -1,22 +1,34 @@
-import {CommonModule} from '@angular/common';
 import {ModuleWithProviders, NgModule, Optional, SkipSelf} from '@angular/core';
+import {EffectsModule} from "@ngrx/effects";
 import {RouterStateSerializer, StoreRouterConnectingModule} from "@ngrx/router-store";
 import {StoreModule} from "@ngrx/store";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {environment} from "../../environments/environment";
+import {PowersService} from "../core/services/powers.service";
+import {AppEffects} from "./app.effects";
 import {appMetaReducers, appReducer} from "./app.reducer";
+import {PowersEffects} from "./powers/effects/powers";
+import * as fromPowers from "./powers/reducers";
 import {CustomRouterStateSerializer} from "./shared/utils";
 
 @NgModule({
   imports: [
-    CommonModule,
     StoreRouterConnectingModule,
     StoreModule.forRoot(appReducer, {
       metaReducers: appMetaReducers
     }),
+    StoreModule.forFeature('powers', fromPowers.reducers),
+    EffectsModule.forRoot([
+      AppEffects
+    ]),
+    EffectsModule.forRoot([
+      PowersEffects
+    ]),
     !environment.production ? StoreDevtoolsModule.instrument() : [],
   ],
-  declarations: []
+  providers: [
+    PowersService
+  ]
 })
 
 export class StateModule {
