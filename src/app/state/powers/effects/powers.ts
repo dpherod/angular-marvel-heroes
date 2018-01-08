@@ -3,7 +3,7 @@ import {MatDialog, MatSnackBar} from "@angular/material";
 import {Actions, Effect} from "@ngrx/effects";
 import {Action} from "@ngrx/store";
 import {Observable} from "rxjs/Observable";
-import {map, switchMap, tap} from "rxjs/operators";
+import {map, mergeMap, switchMap, tap} from "rxjs/operators";
 import {PowersService} from "../../../core/services/powers.service";
 import {AddPowerComponent} from "../../../shared/dialogs/add-power/add-power.component";
 import {SnackbarOpen} from "../../shared/actions/snackbar";
@@ -27,11 +27,13 @@ export class PowersEffects {
   @Effect()
   addPowerSuccess: Observable<any> = this.actions.ofType<AddPowerSuccess>(ADD_POWER_SUCCESS)
     .pipe(
-      map(() => new SnackbarOpen({
-        message: 'Power Created',
-        action: 'Success'
-      })),
-      map(() => new AddPowerDialogClose())
+      mergeMap(() => [
+        new SnackbarOpen({
+          message: 'Power Created',
+          action: 'Success'
+        }),
+        new AddPowerDialogClose()
+      ])
     );
 
   @Effect()
