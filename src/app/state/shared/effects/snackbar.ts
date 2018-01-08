@@ -2,8 +2,8 @@ import {Injectable} from "@angular/core";
 import {MatSnackBar} from "@angular/material";
 import {Actions, Effect} from "@ngrx/effects";
 import {Observable} from "rxjs/Observable";
-import {map, tap} from "rxjs/operators";
-import {SNACKBAR_CLOSE, SNACKBAR_OPEN, SnackbarOpen} from "../actions/snackbar";
+import {delay, map, tap} from "rxjs/operators";
+import {SNACKBAR_CLOSE, SNACKBAR_OPEN, SnackbarClose, SnackbarOpen} from "../actions/snackbar";
 
 @Injectable()
 export class SnackbarEffects {
@@ -22,7 +22,9 @@ export class SnackbarEffects {
   showSnackbar: Observable<any> = this.actions.ofType<SnackbarOpen>(SNACKBAR_OPEN)
     .pipe(
       map((action: SnackbarOpen) => action.payload),
-      tap(payload => this.matSnackBar.open(payload.message, payload.action, payload.config))
+      tap(payload => this.matSnackBar.open(payload.message, payload.action, payload.config)),
+      delay(2000),
+      map(() => new SnackbarClose())
     );
 
   constructor(private actions: Actions,

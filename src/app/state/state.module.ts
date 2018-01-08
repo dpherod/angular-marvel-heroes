@@ -1,12 +1,12 @@
-import {CommonModule} from "@angular/common";
 import {ModuleWithProviders, NgModule, Optional, SkipSelf} from '@angular/core';
-import {MatSnackBarModule} from "@angular/material";
+import {MatDialogModule, MatSnackBarModule} from "@angular/material";
 import {EffectsModule} from "@ngrx/effects";
 import {RouterStateSerializer, StoreRouterConnectingModule} from "@ngrx/router-store";
 import {StoreModule} from "@ngrx/store";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {environment} from "../../environments/environment";
 import {PowersService} from "../core/services/powers.service";
+import {SharedModule} from "../shared/shared.module";
 import {AppEffects} from "./app.effects";
 import {appMetaReducers, appReducer} from "./app.reducer";
 import {PowersEffects} from "./powers/effects/powers";
@@ -16,8 +16,9 @@ import {CustomRouterStateSerializer} from "./shared/utils";
 
 @NgModule({
   imports: [
-    CommonModule,
+    MatDialogModule,
     MatSnackBarModule,
+    SharedModule,
     StoreRouterConnectingModule,
     StoreModule.forRoot(appReducer, {
       metaReducers: appMetaReducers

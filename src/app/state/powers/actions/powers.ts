@@ -3,6 +3,10 @@ import {Power} from "../../../core/models/power.model";
 import {createActionType} from "../../shared/utils";
 
 
+export const ADD_POWER = createActionType('ADD_POWER');
+export const ADD_POWER_SUCCESS = createActionType('ADD_POWER_SUCCESS');
+export const ADD_POWER_DIALOG_OPEN = createActionType('ADD_POWER_DIALOG_OPEN');
+export const ADD_POWER_DIALOG_CLOSE = createActionType('ADD_POWER_DIALOG_CLOSE');
 export const DELETE_POWER = createActionType('DELETE_POWER');
 export const DELETE_POWERS_SUCCESS = createActionType('DELETE_POWERS_SUCCESS');
 export const LOAD_POWER = createActionType('LOAD_POWER');
@@ -13,6 +17,29 @@ export const SELECT_POWER = createActionType('SELECT_POWER');
 export const UPDATE_POWER = createActionType('UPDATE_POWER');
 export const UPDATE_POWER_SUCCESS = createActionType('UPDATE_POWER_SUCCESS');
 
+export class AddPower implements Action {
+  readonly type = ADD_POWER;
+
+  constructor(public payload: Power) {
+  }
+}
+
+export class AddPowerSuccess implements Action {
+  readonly type = ADD_POWER_SUCCESS;
+
+  constructor(public payload: Power) {
+  }
+}
+
+export class AddPowerDialogClose implements Action {
+  readonly type = ADD_POWER_DIALOG_CLOSE;
+  //
+  // constructor(public payload: MatDialogRef<AddPowerComponent>) {}
+}
+
+export class AddPowerDialogOpen implements Action {
+  readonly type = ADD_POWER_DIALOG_OPEN;
+}
 
 export class DeletePower implements Action {
   readonly type = DELETE_POWER;
@@ -76,7 +103,9 @@ export class UpdatePowerSuccess implements Action {
 
 
 export type PowersAction =
-  DeletePower
+  AddPowerDialogClose
+  | AddPowerDialogOPen
+  | DeletePower
   | DeletePowerSuccess
   | LoadPower
   | LoadPowerSuccess
