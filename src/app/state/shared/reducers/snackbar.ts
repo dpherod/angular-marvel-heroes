@@ -1,14 +1,13 @@
-import {EntityState} from "@ngrx/entity";
 import {SNACKBAR_CLOSE, SNACKBAR_OPEN, SnackbarAction} from "../actions/snackbar";
 
-export interface State extends EntityState<void> {
+export class State {
   show: boolean;
 }
 
-const initialState: State
-{
-  show: false;
-}
+const initialState: State = {
+  show: false
+};
+
 
 export function reducer(state: State = initialState, action: SnackbarAction) {
   switch (action.type) {

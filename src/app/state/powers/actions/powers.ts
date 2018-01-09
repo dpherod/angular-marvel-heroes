@@ -104,7 +104,7 @@ export class UpdatePowerSuccess implements Action {
 
 export type PowersAction =
   AddPowerDialogClose
-  | AddPowerDialogOPen
+  | AddPowerDialogOpen
   | DeletePower
   | DeletePowerSuccess
   | LoadPower

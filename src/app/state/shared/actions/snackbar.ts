@@ -25,4 +25,4 @@ export class SnackbarClose implements Action {
 
 export type SnackbarAction =
   SnackbarOpen
-SnackbarClose;
+  | SnackbarClose;
