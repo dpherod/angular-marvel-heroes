@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <h3>Super Heroes</h3>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let hero of heroes">
+        <div mat-card-avatar class="z-depth-5"
+             [ngStyle]="{ 'background-image': 'url(' + getHeroImage(hero) + ')'}"></div>
+        <div fxFlex>
+          <a [routerLink]="['/heroes', hero.id]">{{ hero.character.name }}</a>
+        </div>
+        <div class="actions">
+          <button mat-icon-button [matMenuTriggerFor]="actionsMenu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #actionsMenu="matMenu">
+            <button mat-menu-item [routerLink]="['/heroes', hero.id, 'edit']">Edit</button>
+            <button mat-menu-item (click)="deleteChange.emit(hero)">Delete</button>
+          </mat-menu>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

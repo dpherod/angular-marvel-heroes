@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="end center" class="actions">
+  <button app-icon-button (click)="onAdd()">
+    <mat-icon>add_circle_outline</mat-icon>
+    Add Hero
+  </button>
+</div>
+<app-heroes
+  [heroes]="heroes | async"
+  (deleteChange)="delete($event)">
+</app-heroes>

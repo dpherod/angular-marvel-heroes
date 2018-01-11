@@ -1,0 +1,11 @@
+<app-hero-actions
+  [hero]="hero | async"
+  (deleteChange)="onDelete($event)">
+</app-hero-actions>
+<app-hero-detail
+  [hero]="hero | async"
+  [powers]="powers | async">
+</app-hero-detail>
+
+<pre>{{ hero | async | json}}</pre>
+<pre>{{ powers |async | json}}</pre>

@@ -1,0 +1,27 @@
+<mat-drawer-container (backdropClick)="sidenav.close()" fullscreen>
+  <mat-drawer #sidenav (keydown.escape)="sidenav.close()" disableClose>
+    <mat-list>
+      <mat-list-item>
+        <button mat-button routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button routerLink="/heroes" routerLinkActive="active">Heroes</button>
+      </mat-list-item>
+      <mat-list-item>
+        <button mat-button routerLink="/powers" routerLinkActive="active">Powers</button>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-toolbar color="primary">
+      <mat-icon (click)="sidenav.open()">menu</mat-icon>
+      <span>Tour of Heroes</span>
+    </mat-toolbar>
+    <div fxLayout="row" fxLayoutAlign="center stretch">
+      <!--<div fxFlex.xs="90%" fxFlex.sm="80%" fxFlex.md="70%" fxFlex.lg="65%" fxFlex.xl="60%">-->
+      <div fxFlex.xs="90%" fxFlex.sm="90%" fxFlex.md="90%" fxFlex.lg="90%" fxFlex.xl="90%">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

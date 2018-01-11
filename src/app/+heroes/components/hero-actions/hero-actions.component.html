@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="end center" class="actions">
+  <button app-icon-button (click)="deleteChange.emit(hero)">
+    <mat-icon>delete</mat-icon>
+    Delete
+  </button>
+  <button app-icon-button [routerLink]="['/heroes', hero?.id, 'edit']">
+    <mat-icon>edit</mat-icon>
+    Edit
+  </button>
+</div>

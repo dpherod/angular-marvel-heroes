@@ -1,0 +1,16 @@
+//use tilde to access node modules
+@import '~@angular/material/theming';
+
+:host {
+  mat-chip-list {
+    mat-chip {
+      cursor: pointer;
+      margin: 5px;
+      &.selected {
+        //check material color palette
+        color: #ffff;
+        background-color: mat-color($mat-deep-orange, A200);
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<form [formGroup]="form" (submit)="save()">
+  <app-dialog-header (close)="close()"><h2>Add Hero</h2></app-dialog-header>
+  <mat-dialog-content>
+    <mat-form-field>
+      <input matInput placeholder="Hero Name" formControlName="name" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayCharacterAutoComplete"
+                        (optionSelected)="characterSelected($event)">
+        <mat-option *ngFor="let character of characters | async" [value]="character">
+          {{character.name}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <app-power-chip-list
+      [powers]="powers | async"
+      (powerChange)="onPowerChange($event)">
+    </app-power-chip-list>
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="submit">Save</button>
+  </mat-dialog-actions>
+</form>

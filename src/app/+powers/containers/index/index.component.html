@@ -1,0 +1,13 @@
+<!--<pre>{{ loading | async}}</pre>-->
+
+<div fxLayout="row" fxLayoutAlign="end center" class="actions">
+  <button app-icon-button (click)="onAdd()">
+    <mat-icon>add_circle_outline</mat-icon>
+    Add Power
+  </button>
+</div>
+<app-powers
+  [loading]="loading | async"
+  [powers]="powers | async"
+  (deleteChange)="onDelete($event)">
+</app-powers>
