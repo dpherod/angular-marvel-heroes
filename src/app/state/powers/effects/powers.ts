@@ -9,8 +9,9 @@ import {AddPowerComponent} from "../../../shared/dialogs/add-power/add-power.com
 import {SnackbarOpen} from "../../shared/actions/snackbar";
 import {
   ADD_POWER, ADD_POWER_DIALOG_CLOSE, ADD_POWER_DIALOG_OPEN, ADD_POWER_SUCCESS, AddPower, AddPowerDialogClose,
-  AddPowerSuccess, DELETE_POWER, DeletePower, DeletePowerSuccess, LOAD_POWER, LOAD_POWERS, LoadPower,
-  LoadPowersSuccess, LoadPowerSuccess, UPDATE_POWER, UPDATE_POWER_SUCCESS, UpdatePower, UpdatePowerSuccess
+  AddPowerSuccess, DELETE_POWER, DeletePower, DeletePowerSuccess, LOAD_POWER, LOAD_POWERS,
+  LOAD_POWERS_FOR_SELECTED_HERO, LoadPower, LoadPowersForSelectedHero, LoadPowersSuccess, LoadPowerSuccess,
+  UPDATE_POWER, UPDATE_POWER_SUCCESS, UpdatePower, UpdatePowerSuccess
 } from "../actions/powers";
 
 @Injectable()
@@ -75,6 +76,14 @@ export class PowersEffects {
   loadPowers: Observable<Action> = this.actions.ofType(LOAD_POWERS)
     .pipe(
       switchMap(() => this.powersService.getPowers()),
+      map(powers => new LoadPowersSuccess(powers))
+    );
+
+  @Effect()
+  loadPowersByHero: Observable<Action> = this.actions.ofType<LoadPowersForSelectedHero>(LOAD_POWERS_FOR_SELECTED_HERO)
+    .pipe(
+      map(action => action.payload),
+      switchMap(payload => this.powersService.getPowersByHero(payload.id)),
       map(powers => new LoadPowersSuccess(powers))
     );
 

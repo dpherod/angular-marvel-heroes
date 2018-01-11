@@ -7,3 +7,5 @@ export interface AppState {
   router: RouterReducerState<RouterStateUrl>;
   snackbar: fromSnackbar.State;
 }
+
+

@@ -13,6 +13,8 @@ export const LOAD_POWER = createActionType('LOAD_POWER');
 export const LOAD_POWER_SUCCESS = createActionType('LOAD_POWER_SUCCESS');
 export const LOAD_POWERS = createActionType('LOAD_POWERS');
 export const LOAD_POWERS_SUCCESS = createActionType('LOAD_POWERS_SUCCESS');
+export const LOAD_POWERS_FOR_SELECTED_HERO = createActionType('LOAD_POWERS_FOR_SELECTED_HERO');
+export const LOAD_POWERS_FOR_SELECTED_HERO_SUCCESS = createActionType('LOAD_POWERS_FOR_SELECTED_HERO_SUCCESS');
 export const SELECT_POWER = createActionType('SELECT_POWER');
 export const UPDATE_POWER = createActionType('UPDATE_POWER');
 export const UPDATE_POWER_SUCCESS = createActionType('UPDATE_POWER_SUCCESS');
@@ -80,6 +82,20 @@ export class LoadPowersSuccess implements Action {
   }
 }
 
+export class LoadPowersForSelectedHero implements Action {
+  readonly type = LOAD_POWERS_FOR_SELECTED_HERO;
+
+  constructor(public payload: { id: number }) {
+  }
+}
+
+export class LoadPowersForSelectedHeroSuccess implements Action {
+  readonly type = LOAD_POWERS_FOR_SELECTED_HERO_SUCCESS;
+
+  constructor(public payload: Power[]) {
+  }
+}
+
 export class SelectPower implements Action {
   readonly type = SELECT_POWER;
 
@@ -111,6 +127,8 @@ export type PowersAction =
   | LoadPowerSuccess
   | LoadPowers
   | LoadPowersSuccess
+  | LoadPowersForSelectedHero
+  | LoadPowersForSelectedHeroSuccess
   | SelectPower
   | UpdatePower
   | UpdatePowerSuccess ;

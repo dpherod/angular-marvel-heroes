@@ -34,6 +34,11 @@ export class PowersService extends BaseService {
     return this.httpClient.get<Array<Power>>(`${this.BASE_URL}/powers`);
   }
 
+  // pass hero id to return array of powers
+  getPowersByHero(id: number): Observable<Array<Power>> {
+    return this.httpClient.get<Array<Power>>(`${this.BASE_URL}/powers/${id}`);
+  }
+
   updatePower(power: Power): Observable<Power> {
     return this.httpClient.put<Power>(`${this.BASE_URL}/powers/${power.id}`, power);
   }

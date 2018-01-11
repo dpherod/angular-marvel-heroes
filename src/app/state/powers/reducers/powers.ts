@@ -2,7 +2,8 @@ import {createEntityAdapter, EntityAdapter, EntityState} from "@ngrx/entity";
 import {Power} from "../../../core/models/power.model";
 import {
   ADD_POWER_DIALOG_CLOSE, ADD_POWER_DIALOG_OPEN, DELETE_POWERS_SUCCESS, LOAD_POWER_SUCCESS, LOAD_POWERS,
-  LOAD_POWERS_SUCCESS, PowersAction, SELECT_POWER, UPDATE_POWER_SUCCESS
+  LOAD_POWERS_FOR_SELECTED_HERO, LOAD_POWERS_FOR_SELECTED_HERO_SUCCESS, LOAD_POWERS_SUCCESS, PowersAction,
+  SELECT_POWER, UPDATE_POWER_SUCCESS
 } from "../actions/powers";
 
 export interface State extends EntityState<Power> {
@@ -32,6 +33,11 @@ export function reducer(state: State = initialState, action: PowersAction) {
     case LOAD_POWERS:
       return {...state, loading: true};
     case LOAD_POWERS_SUCCESS:
+      state = {...state, loading: false};
+      return adapter.addAll(action.payload, state);
+    case LOAD_POWERS_FOR_SELECTED_HERO:
+      return {...state, loading: true};
+    case LOAD_POWERS_FOR_SELECTED_HERO_SUCCESS:
       state = {...state, loading: false};
       return adapter.addAll(action.payload, state);
     case SELECT_POWER:
