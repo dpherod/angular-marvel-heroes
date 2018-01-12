@@ -1,5 +1,5 @@
 import {createFeatureSelector, createSelector} from "@ngrx/store";
-import {getSelectedHeroId} from "../../heroes/reducers";
+import {getSelectedHero} from "../../heroes/reducers";
 import * as fromPowers from "./powers";
 
 export interface PowersState {
@@ -36,9 +36,9 @@ export const getSelectedPower = createSelector(
 );
 
 export const getPowersForSelectedHero = createSelector(
-  getPowerEntities,
-  getSelectedHeroId,
-  (entities, selectedHeroId) => entities && entities[selectedHeroId]
+  getAllPowers,
+  getSelectedHero,
+  (powers, hero) => powers.filter(power => hero.powers.indexOf(power.id) > -1)
 );
 
 export const isPowerLoading = createSelector(

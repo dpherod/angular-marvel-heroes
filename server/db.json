@@ -3481,6 +3481,320 @@
         2
       ],
       "id": 16
+    },
+    {
+      "name": {
+        "id": 1011002,
+        "name": "Marvel Zombies",
+        "description": "",
+        "modified": "2010-11-30T15:55:43-0500",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/40/4ce5a430d93fd",
+          "extension": "jpg"
+        },
+        "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011002",
+        "comics": {
+          "available": 10,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011002/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4812",
+              "name": "Marvel Zombies (Hardcover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/3220",
+              "name": "Marvel Zombies (2005) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/3430",
+              "name": "Marvel Zombies (2005) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/3549",
+              "name": "Marvel Zombies (2005) #3"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/3956",
+              "name": "Marvel Zombies (2005) #4"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4082",
+              "name": "Marvel Zombies (2005) #5"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/63033",
+              "name": "Zombies Assemble (2017) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/63269",
+              "name": "Zombies Assemble (2017) #3"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64291",
+              "name": "Zombies Assemble 2 (2017) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64564",
+              "name": "Zombies Assemble 2 (2017) #2"
+            }
+          ],
+          "returned": 10
+        },
+        "series": {
+          "available": 4,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011002/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/998",
+              "name": "Marvel Zombies (2005 - 2006)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1787",
+              "name": "Marvel Zombies (2006)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/23085",
+              "name": "Zombies Assemble (2017)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/23388",
+              "name": "Zombies Assemble 2 (2017)"
+            }
+          ],
+          "returned": 4
+        },
+        "stories": {
+          "available": 9,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011002/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5633",
+              "name": "1 of 5 xLS",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5634",
+              "name": "2 of 5 xLS",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5636",
+              "name": "3 of 5 xLS",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5638",
+              "name": "4 of 5 xLS",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5640",
+              "name": "5 of 5 xLS",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/136963",
+              "name": "cover from Zombies Assemble (2017) #2",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/137382",
+              "name": "cover from Zombies Assemble (2017) #3",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/139564",
+              "name": "cover from Zombies Assemble 2 (2017) #1",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/140139",
+              "name": "cover from Zombies Assemble 2 (2017) #2",
+              "type": "cover"
+            }
+          ],
+          "returned": 9
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011002/events",
+          "items": [],
+          "returned": 0
+        },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1381/marvel_zombies?utm_campaign=apiRef&utm_source=7860f1f0133f762bfd2b024d0634e5b8"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Marvel_Zombies_(Earth-2149)?utm_campaign=apiRef&utm_source=7860f1f0133f762bfd2b024d0634e5b8"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011002/marvel_zombies?utm_campaign=apiRef&utm_source=7860f1f0133f762bfd2b024d0634e5b8"
+          }
+        ]
+      },
+      "character": {
+        "id": 1011002,
+        "name": "Marvel Zombies",
+        "description": "",
+        "modified": "2010-11-30T15:55:43-0500",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/40/4ce5a430d93fd",
+          "extension": "jpg"
+        },
+        "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011002",
+        "comics": {
+          "available": 10,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011002/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4812",
+              "name": "Marvel Zombies (Hardcover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/3220",
+              "name": "Marvel Zombies (2005) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/3430",
+              "name": "Marvel Zombies (2005) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/3549",
+              "name": "Marvel Zombies (2005) #3"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/3956",
+              "name": "Marvel Zombies (2005) #4"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4082",
+              "name": "Marvel Zombies (2005) #5"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/63033",
+              "name": "Zombies Assemble (2017) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/63269",
+              "name": "Zombies Assemble (2017) #3"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64291",
+              "name": "Zombies Assemble 2 (2017) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/64564",
+              "name": "Zombies Assemble 2 (2017) #2"
+            }
+          ],
+          "returned": 10
+        },
+        "series": {
+          "available": 4,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011002/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/998",
+              "name": "Marvel Zombies (2005 - 2006)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1787",
+              "name": "Marvel Zombies (2006)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/23085",
+              "name": "Zombies Assemble (2017)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/23388",
+              "name": "Zombies Assemble 2 (2017)"
+            }
+          ],
+          "returned": 4
+        },
+        "stories": {
+          "available": 9,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011002/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5633",
+              "name": "1 of 5 xLS",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5634",
+              "name": "2 of 5 xLS",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5636",
+              "name": "3 of 5 xLS",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5638",
+              "name": "4 of 5 xLS",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/5640",
+              "name": "5 of 5 xLS",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/136963",
+              "name": "cover from Zombies Assemble (2017) #2",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/137382",
+              "name": "cover from Zombies Assemble (2017) #3",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/139564",
+              "name": "cover from Zombies Assemble 2 (2017) #1",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/140139",
+              "name": "cover from Zombies Assemble 2 (2017) #2",
+              "type": "cover"
+            }
+          ],
+          "returned": 9
+        },
+        "events": {
+          "available": 0,
+          "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011002/events",
+          "items": [],
+          "returned": 0
+        },
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/characters/1381/marvel_zombies?utm_campaign=apiRef&utm_source=7860f1f0133f762bfd2b024d0634e5b8"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Marvel_Zombies_(Earth-2149)?utm_campaign=apiRef&utm_source=7860f1f0133f762bfd2b024d0634e5b8"
+          },
+          {
+            "type": "comiclink",
+            "url": "http://marvel.com/comics/characters/1011002/marvel_zombies?utm_campaign=apiRef&utm_source=7860f1f0133f762bfd2b024d0634e5b8"
+          }
+        ]
+      },
+      "powers": [
+        11,
+        7,
+        1
+      ],
+      "id": 17
     }
   ],
   "powers": [
@@ -3551,6 +3865,10 @@
     {
       "name": "shaZOOO!",
       "id": 17
+    },
+    {
+      "name": "Awesomeness",
+      "id": 18
     }
   ]
 }
