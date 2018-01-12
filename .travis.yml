@@ -1,0 +1,19 @@
+dist: trusty
+sudo: false
+
+language: node_js
+node_js:
+  - "6"
+
+cache: yarn
+
+addons:
+  chrome: stable
+
+install: true
+
+script:
+  # Use Chromium instead of Chrome.
+  - cd client && yarn install
+  - xvfb-run -a yarn test --single-run --no-progress --browser=ChromeNoSandbox
+  - xvfb-run -a yarn e2e --no-progress --config=protractor-ci.conf.js
